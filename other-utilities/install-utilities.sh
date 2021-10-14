@@ -1,4 +1,4 @@
-sudo pacman -Syu --needed pulseaudo pulseaudio-alsa pavucontrol celluloid gimp viewnior libreoffice-still okular firefox tar zip unzip unrar xarchiver pcmanfm
+sudo pacman -Syu --needed pulseaudo pulseaudio-alsa pavucontrol celluloid gimp viewnior libreoffice-still okular firefox tar zip unzip unrar xarchiver pcmanfm alacritty discord telegram-desktop gparted gnome-disk-utility vim mousepad
 
 #install yay aur helper
 cd ~
