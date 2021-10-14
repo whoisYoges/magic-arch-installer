@@ -8,6 +8,7 @@
  1. boot and login into your arch or arch based system with regular user.
  2. Decide which DE or WM to install and get the script in your machine.
  3. Get the installation script in your machine.
+
 	 a. Cinnamon
 	 ```
 	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/without-login-manager/install-cinnamon.sh > install-cinnamon.sh
@@ -40,20 +41,23 @@
 	 ```
 	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/without-login-manager/install-cinnamon.sh > install-xfce.sh
 	 ```
- 4. Make necessary changes in the script opening it in your favourite text editor ( nano or vim) if requird. 
+ 4. Make necessary changes in the script opening it in your favourite text editor ( nano or vim) if required. 
 
  5. Make the script executable.
 	 ```
 	 chmod +x install-<your DE/WM>.sh
 	 ```
- 6. Executr the script
+ 6. Execute the script
 	 ```
 	 ./install-<your DE/WM>.sh
 	 ```
 
-
 FOR EXAMPLE:
+
 	To install xfce:
-	 ` curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/without-login-manager/install-xfce.sh > install-xfce.sh `
-	 ` chmod +x install-xfce.sh `
-	 ` ./install-xfce.sh `
+	
+	curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/without-login-manager/install-xfce.sh > install-xfce.sh
+	 
+	chmod +x install-xfce.sh
+	 
+	./install-xfce.sh
