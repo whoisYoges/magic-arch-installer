@@ -11,35 +11,35 @@
 
 	 a. Cinnamon
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-cinnamon.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-cinnamon.sh
 	 ```
 	 b. DWM
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-dwm.sh > install-dwm.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-dwm.sh > install-dwm.sh
 	 ```
 	 c. Gnome
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-gnome.sh > install-gnome.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-gnome.sh > install-gnome.sh
 	 ```
 	 d. I3
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-i3.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-i3.sh
 	 ```
 	 e. KDE
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-kde.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-kde.sh
 	 ```
 	 f. LXQt
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-lxqt.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-lxqt.sh
 	 ```
 	 g. Mate
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-mate.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-mate.sh
 	 ```
 	 h. Xfce
 	 ```
-	 curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-xfce.sh
+	 curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-cinnamon.sh > install-xfce.sh
 	 ```
  4. Make necessary changes in the script opening it in your favourite text editor ( nano or vim) if required. 
 
@@ -56,7 +56,7 @@ FOR EXAMPLE:
 
 	To install xfce:
 	
-	curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-xfce.sh > install-xfce.sh
+	curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/gui-with-xorg/with-login-manager/install-xfce.sh > install-xfce.sh
 	 
 	chmod +x install-xfce.sh
 	 
