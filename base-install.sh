@@ -56,7 +56,7 @@ clear
 umount -R /mnt
 echo "Pre-Installation Finished. Rebooting in 10 seconds"
 echo "You can install gui and other utilities after rebooting."
-echo "You can check https://github.com/YogeshLamichhane/magic-arch-installer/ for gui and other utilities installation/automation scripts."
+echo "You can check https://github.com/whoisYoges/magic-arch-installer/ for gui and other utilities installation/automation scripts."
 sleep 10s
 reboot
 exit
@@ -77,17 +77,18 @@ echo "127.0.0.1       localhost" >> /etc/hosts
 echo "::1             localhost" >> /etc/hosts
 echo "127.0.1.1       $hostname" >> /etc/hosts
 clear
-echo "Enter password for root user:"
-passwd
 #if you are dualbooting, add os-prober with grub and efibootmgr
-pacman -Sy --noconfirm grub efibootmgr
+pacman -Sy --needed grub efibootmgr
 echo "Installing grub bootloader in /boot/efi parttiton"
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S networkmanager
 systemctl enable NetworkManager
 clear
-echo "Enter username to add a user: "
+echo "Enter password for root user:"
+passwd
+clear
+echo "Enter username to add a regular user: "
 read username
 useradd -m -g users -G wheel -s /bin/bash $username
 echo "Enter password for the user you created just now:"
