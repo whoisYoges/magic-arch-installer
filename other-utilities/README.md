@@ -3,7 +3,7 @@
 ### How to use it?
 1. get the script in your machine.
 ```
-curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/other-utilities/install-utilities.sh > install-utilities.sh
+curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/other-utilities/install-utilities.sh > install-utilities.sh
 ```
 2. open the script with text editor vim or nano and make necessary changes if required (add or remove the packages according to your needs) and save it.
 
