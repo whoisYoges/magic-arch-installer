@@ -17,7 +17,7 @@ For [mobile broadband connection check here](https://wiki.archlinux.org/title/Mo
 
 2. get base-install.sh in your installation media.
 ```
-curl https://raw.githubusercontent.com/YogeshLamichhane/magic-arch-installer/master/base-install.sh > base-install.sh
+curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/base-install.sh > base-install.sh
 ```
 3. open the script with text editor vim or nano and make necessary changes if required (such as timezone, kernel and kernel-headers, filesystem type, etc) and save it.
 
