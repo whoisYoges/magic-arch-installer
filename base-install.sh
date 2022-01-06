@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "Welcome to magic-arch-installer."
 echo "Install arch linux in few clicks. Even a 5 year kid can install arch now."
 pacman -Sy

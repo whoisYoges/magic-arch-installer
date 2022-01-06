@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "Welcome to magic-arch-installer."
 echo "Install arch linux in few clicks. Even a 5 year kid can install arch now."
 pacman -Sy
@@ -8,8 +10,8 @@ echo "Enter the drive to create partitions for linux systems ( eg: /dev/sda). "
 echo "root, home, swap partitions need to be created. home and swap partitions are optional but recommended: "
 read drive
 
-# you can use fdisk or gdisk in place of fdisk as well.
-cfdisk $drive
+# you can use cfdisk or gdisk in place of fdisk as well.
+fdisk $drive
 clear
 lsblk
 echo "Enter the root partition (eg: /dev/sda1): "
@@ -87,10 +89,12 @@ clear
 echo "Add password for root user:"
 passwd
 clear
-echo "Add a regular user (Set Username): "
+echo "Lets add a regular user..."
+echo "It is different from your computer name."
+echo "Set Username (it is used to login to your system): "
 read username
 useradd -m -g users -G wheel -s /bin/bash $username
-echo "Enter password for the user you created just now:"
+echo "Enter password for user '$username' :"
 passwd $username
 clear
 echo "NOTE: ALWAYS REMEMBER THIS USERNAME AND PASSWORD YOU PUT JUST NOW."
