@@ -50,7 +50,7 @@ echo " 3. gdisk"
 echo " 4. parted"
 read partitionutility
 
-case "$filesystemtype" in
+case "$partitionutility" in
   1 | fdisk | Fdisk | FDISK)
   partitionutility="fdisk"
   ;;
@@ -75,7 +75,8 @@ echo "Getting ready for creating partitions!"
 echo "root partition is mandatory."
 echo "home and swap partitions are optional but recommended!"
 echo "Also, you can create a separate partition for timeshift backup (optional)!"
-sleep 3s
+echo "Getting ready in 9 seconds"
+sleep 9s
 "$partitionutility" "$drive"
 clear
 lsblk
