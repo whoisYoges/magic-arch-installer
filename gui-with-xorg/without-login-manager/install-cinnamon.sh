@@ -24,5 +24,5 @@ sudo pacman -Sy --needed xorg-server xorg-xinit cinnamon alacritty
 #sudo pacman -Sy --needed gnome-keyring
 
 cd ~
-echo "exex cinnamon-session" > .xinitrc
+echo "exec cinnamon-session" > .xinitrc
 startx

@@ -14,9 +14,9 @@ For [Wifi connection check here](https://wiki.archlinux.org/title/Iwd#iwctl).
 For [mobile broadband connection check here](https://wiki.archlinux.org/title/Mobile_broadband_modem#ModemManager).
 
 ### For UEFI Installation Type
-2 a. get base-install.sh in your installation media.
+2 a. get uefi-base-install.sh in your installation media.
 ```
-curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/base-install.sh > base-install.sh
+curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/uefi-base-install.sh > uefi-base-install.sh
 ```
 3 a. open the script with text editor vim or nano and make necessary changes if required (such as timezone, kernel and kernel-headers, filesystem type, etc) and save it.
 
@@ -43,3 +43,6 @@ chmod +x legacy-base-install.sh
 ```
 ./legacy-base-install.sh
 ```
+
+### This does the base installation of arch in your machine.
+To install GUI check [gui-with-xorg].

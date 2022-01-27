@@ -12,5 +12,5 @@ sudo pacman -Sy --needed xorg-server xorg-xinit lxqt
 #sudo pacman -Sy xf86-video-intel
 
 cd ~
-echo "exex startlxqt" > .xinitrc
+echo "exec startlxqt" > .xinitrc
 startx

@@ -30,7 +30,7 @@ clear
 
 lsblk
 echo "Enter the drive to create partitions for linux systems ( eg: /dev/sda). "
-echo "root partition is mandatory."
+echo "root and boot partitions are mandatory."
 echo "home and swap partitions are optional but recommended! "
 echo "Also, you can create a separate partition for timeshift backup (optional): "
 read drive
@@ -44,6 +44,7 @@ echo " 1. ext4"
 echo " 2. xfs"
 echo " 3. btrfs"
 echo " 4. f2fs"
+echo " Boot partition will be formatted in fat32 file system type."
 read filesystemtype
 
 case "$filesystemtype" in
@@ -106,6 +107,9 @@ esac
 
 clear
 lsblk
+echo "Operations on efi parttiton will be done later.): "
+sleep 3s
+clear
 #Replace kernel header file and with your requirements (eg linux-zen linux-zen-headers)
 #replace intel-ucode with amd-ucode if you use amd processor
 echo "Installing Base system!!!"
@@ -116,7 +120,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 sleep 2s
 clear
 echo "Working inside new root system!!!"
-sed '1,/^#part2$/d' legacy-base-install.sh > /mnt/post_base-install.sh
+sed '1,/^#part2$/d' uefi-base-install.sh > /mnt/post_base-install.sh
 chmod +x /mnt/post_base-install.sh
 echo "Working inside new root system!!!"
 arch-chroot /mnt ./post_base-install.sh
@@ -152,18 +156,26 @@ echo "::1             localhost" >> /etc/hosts
 echo "127.0.1.1       $hostname" >> /etc/hosts
 clear
 #if you are dualbooting, add os-prober with grub and efibootmgr
-echo "Installing grub and networkmanager"
+echo "Installing grub efibootmgr and networkmanager"
 sleep 2s
-pacman -Sy --needed grub networkmanager
+pacman -Sy --needed grub efibootmgr networkmanager
+clear
+
+lsblk
+echo "Enter the efi partition to install grub. (eg: /dev/sda1): "
+read efipartition
+mkfs.fat -F 32 "$efipartition"
+efidirectory="/boot/efi/"
+if [ ! -d "$efidirectory" ]; then
+  mkdir -p "$efidirectory"
+fi
+mount "$efipartition" "$efidirectory"
 clear
 mkinitcpio -P
 clear
 lsblk
-echo "Install grub bootloader in your system"
-echo "Enter the drive (not the parttition) to install grub ( eg: /dev/sda). "
-echo "Note: Remember not to add sda1 or sda2 it's just /dev/sda or /dev/sdb."
-read grubdrive
-grub-install --target=i386-pc "$grubdrive"
+echo "Installing grub bootloader in /boot/efi parttiton"
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
 grub-mkconfig -o /boot/grub/grub.cfg
 echo "Enabling NetworkManager"
 systemctl enable NetworkManager

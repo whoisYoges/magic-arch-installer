@@ -11,4 +11,3 @@ Those DE/WM which doesn't come with terminal emulator by default, alacritty is u
  2. Without Login manager
  	`startx` command is used to start the gui after logging in to tty.
  	xorg-xinit package is used for this, creating .xinitrc file in your home directory.
-

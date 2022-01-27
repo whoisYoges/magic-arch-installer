@@ -16,5 +16,5 @@ sudo pacman -Sy --needed xorg-server xorg-xinit xfce4
 #sudo pacman -Sy xf86-video-intel
 
 cd ~
-echo "exex startxfce4" > .xinitrc
+echo "exec startxfce4" > .xinitrc
 startx

@@ -28,5 +28,5 @@ cd ~
 #sudo pacman -Sy xf86-video-intel
 
 cd ~
-echo "exex dwm" > .xinitrc
+echo "exec dwm" > .xinitrc
 startx
