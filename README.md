@@ -26,17 +26,17 @@ git clone https://github.com/whoisYoges/magic-arch-installer
 ```
 cd magic-arch-installer
 ```
-	3a. For UEFI installatios:
-	```
-	chmod +x uefi-base-install.sh && \
-	./uefi-base-install.sh
-	```
-
-	3b. For Legacy installatios:
-	```
-	chmod +x legacy-base-install.sh && \
-	./legacy-base-install.sh
-	```
+- 3a. For UEFI installatios:
+ ```
+ chmod +x uefi-base-install.sh && \
+ ./uefi-base-install.sh
+ ```
+ 
+- 3b. For Legacy installatios:
+ ```
+ chmod +x legacy-base-install.sh && \
+ ./legacy-base-install.sh
+ ```
 
 ### This does the base installation of arch (without GUI) in your machine.
 To install GUI check [gui-with-xorg](gui-with-xorg).
