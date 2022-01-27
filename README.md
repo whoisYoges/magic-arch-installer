@@ -13,6 +13,8 @@ For [Wifi connection check here](https://wiki.archlinux.org/title/Iwd#iwctl).
 
 For [mobile broadband connection check here](https://wiki.archlinux.org/title/Mobile_broadband_modem#ModemManager).
 
+
+### *Note: filenames must be same as original. Changing the filename when downloading script breaks the script.*
 ### For UEFI Installation Type
 2 a. get uefi-base-install.sh in your installation media.
 ```
@@ -22,11 +24,11 @@ curl https://raw.githubusercontent.com/whoisYoges/magic-arch-installer/master/ue
 
 4 a. make it executable.
 ```
-chmod +x base-install.sh
+chmod +x uefi-base-install.sh
 ```
 5 a. run it.
 ```
-./base-install.sh
+./uefi-base-install.sh
 ```
 ## For Legacy Installation Type
 2 b. get base-install.sh in your installation media.
