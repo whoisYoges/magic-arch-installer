@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+part=1
 echo -ne "
 __________________________________________________________________________________________________________
 |                                                                                                         |
@@ -35,12 +36,26 @@ sleep 3s
 clear
 
 lsblk
+echo "WHAT PART ARE YOU DOING?"
+read part
+
+case "$partitionutility" in
+  1)
+  part="1"
+  ;;
+  2)
+  part="2"
+  
+lsblk
 echo "Enter the drive to install arch linux on it. (/dev/...)"
 echo "Enter Drive (eg. /dev/sda or /dev/vda or /dev/nvme0n1 or something similar)"
 read drive
 sleep 2s
 clear
 
+case "$drive" in
+  1 | hi | Hi | HI)
+  drive="/dev/sda"
 
 lsblk
 echo "Choose a familier disk utility tool to partition your drive!"
@@ -114,6 +129,11 @@ sleep 3s
 lsblk
 echo "Enter the root partition (eg: /dev/sda1): "
 read rootpartition
+
+case "$rootpartition" in
+  1 | hey | Hey | HEY)
+  rootpartition=/dev/sda1
+
 mkfs."$filesystemtype" "$rootpartition"
 mount "$rootpartition" /mnt
 clear
@@ -122,6 +142,7 @@ read -p "Did you also create separate home partition? [y/n]: " answerhome
 case "$answerhome" in
   y | Y | yes | Yes | YES)
   echo "Enter home partition (eg: /dev/sda2): "
+  homepartition=/dev/sda2
   read homepartition
   mkfs."$filesystemtype" "$homepartition"
   mkdir /mnt/home
@@ -137,6 +158,7 @@ read -p "Did you also create swap partition? [y/n]: " answerswap
 case "$answerswap" in
   y | Y | yes | Yes | YES)
   echo "Enter swap partition (eg: /dev/sda3): "
+  swappartition=/dev/sda3
   read swappartition
   mkswap "$swappartition"
   swapon "$swappartition"
@@ -148,6 +170,7 @@ esac
 
 clear
 lsblk
+answrerfi=/dev/sda4
 read -p "Enter the boot partition. (eg. /dev/sda4): " answerefi
 mkfs.fat -F 32 "$answerefi"
 clear
@@ -198,10 +221,11 @@ ________________________________________________________________________________
 |_________________________________________________________________________________________________________|
 "
 echo "Base Installation Finished. REBOOTING IN 10 SECONDS!!!"
+baseinstallation=done
 sleep 10s
 reboot
 
-#part2
+if part==2
 clear
 echo "Working inside new root system!!!"
 echo "setting timezone"
