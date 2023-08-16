@@ -225,7 +225,7 @@ baseinstallation=done
 sleep 10s
 reboot
 
-#part2
+if part==2
 clear
 echo "Working inside new root system!!!"
 echo "setting timezone"
